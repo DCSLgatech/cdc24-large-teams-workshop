@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Decision Making in Multi-Agent Systems</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="Large Population Teams: Control, Equilibra \& Learning CDC 2024"
+    content="Large Population Teams CDC 2024" />
+
+  <!--
+    //////////////////////////////////////////////////////
+
+    FREE TEMPLATE
+    DESIGNED & DEVELOPED by free-template.co
+
+    Website:    https://free-template.co
+    Facebook:   https://www.facebook.com/FreeDashTemplate.co
+    Twitter:    https://twitter.com/Free_Templateco
+
+    //////////////////////////////////////////////////////
+    -->
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    table {
+      border-collapse: separate;
+      border-spacing: 20px 0;
+    }
+
+    td {
+      padding: 5px;
+    }
+  </style>
+
+  <style>
+    .collapsible {
+      background-color: white;
+      color: maroon;
+      cursor: pointer;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+    }
+
+    .collapsible:hover {
+      background-color: rgb(240, 240, 240);
+    }
+
+    .collapsible:after {
+      content: '\002B';
+      color: black;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+      margin-right: 15px;
+    }
+
+    .left-col {
+      width: 15%;
+    }
+
+    .collapsible.active::after {
+      content: "\2212";
+    }
+
+    .hidden-content {
+      padding: 0 5px;
+      overflow: hidden;
+      background-color: white;
+      max-height: 0;
+      line-height: 115%;
+      transition: max-height 0.2s ease-out;
+    }
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
+
+  <!-- <div class="site-wrap"> -->
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <header class="site-navbar py-3 js-site-navbar site-navbar-target" role="banner" id="site-navbar">
+
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-11 col-xl-2 site-logo">
+          <p class="mb-0">
+            <a href="index.html" class="text-white mb-0"></a>
+          </p>
+        </div>
+        <div class="col-12 col-md-10 d-none d-xl-block">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+
+            <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+              <li><a href="#section-home" class="nav-link">Home</a></li>
+              <li class="has-children">
+                <!-- <li><a href="#section-announcement" class="nav-link">Announcements</a></li> -->
+              <li><a href="#section-about" class="nav-link">About</a></li>
+              <!-- <li><a href="#section-videos" class="nav-link">Videos</a></li> -->
+              <li><a href="#section-speakers" class="nav-link">Speakers</a></li>
+              <!-- <li><a href="#section-cfp" class="nav-link">Call for Papers</a></li> -->
+              <!--li><a href="#section-videos" class="nav-link">Videos</a></li-->
+              <li><a href="#section-program" class="nav-link">Program</a></li>
+              <li><a href="#section-papers" class="nav-link">Contributed Posters</a></li>
+              <li><a href="#section-organizers" class="nav-link">Organizers</a></li>
+              <!-- <li><a href="#section-sponsors" class="nav-link">Sponsors</a></li> -->
+            </ul>
+          </nav>
+        </div>
+
+
+        <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#"
+            class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
+
+      </div>
+
+    </div>
+    </div>
+
+  </header>
+
+
+
+  <div class="site-blocks-cover overlay" style="background-image: url(images/cdc_banner_web.png);" data-aos="fade"
+    data-stellar-background-ratio="0.5" id="section-home">
+    <div class="container">
+      <div class="row align-items-center justify-content-center text-center">
+
+        <div class="col-md-10" data-aos="fade-up" data-aos-delay="600">
+
+
+          <h1 class="text-white font-weight-light text-uppercase font-weight-bold" data-aos="fade-up">Large Population Teams: Control, Equilibria & Learning </h1>
+          <br>
+          <h2 class="mb-5" data-aos="fade-up" data-aos-delay="100" style="color:white">2024 CDC Full-Day Workshop</h2>
+          <h2 class="mb-5" data-aos="fade-up" data-aos-delay="100" style="color:white">TBD</h2>
+          <!-- <h4 class="mb-5" data-aos="fade-up" data-aos-delay="100" style="color:white">[This workshop will be held in
+            hybrid form]</h4>
+          <h4 class="mb-5" data-aos="fade-up" data-aos-delay="100" style="color:white">[IROS22 registration is required]
+          </h4> -->
+          <!--p data-aos="fade-up" data-aos-delay="200"><a href="https://free-template.co" class="btn btn-primary py-3 px-5 text-white">Start Racing!</a></p-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="site-section" id="section-announcement">
+    <div class="container">
+      <div class="row mb-0 mt-5">
+
+        <div class="text-justify pb-1 border-primary mb-4">
+          <h2 class="text-primary">Announcements</h2>
+        </div>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <p>
+          <font size="+1">All authors and participants **must** register through the IROS-22 <a
+              href="https://iros2022.org/registrationvisa/registration/#virtual-online-registration-fees9"
+              target="_blank">registration website</a> .
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        </p>
+        <h5> Venue Info:</h5>
+        <ul>
+          <li>Zoom link for the workshop: &nbsp&nbsp &nbsp&nbsp <a href="https://gatech.zoom.us/j/96212204755"
+              target="_blank">gatech.zoom.us/j/96212204755</a></li>
+          <li>IROS Conference Room: <font style="color:navy">&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp Room 15
+              (ThWF-15)</font>
+          </li>
+        </ul>
+        <p>
+          <font size="+2"> Zoom link for the workshop: &nbsp&nbsp &nbsp&nbsp <a
+              href="https://gatech.zoom.us/j/96212204755" target="_blank">gatech.zoom.us/j/96212204755</a>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          </font>
+        </p>
+        <p>
+          <font size="+2"> Venue Info: &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp Room 15 (ThWF-15).
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          </font>
+        </p>
+
+        <br>
+      <p data-aos="fade-up" data-aos-delay="200"><a href="https://forms.gle/i9xpkbGUuz52wMLG9" target="_blank" class="btn btn-primary py-3 px-5 text-white">Register Here [Free]</a></p>
+
+        <h5> Thank you to all our participants and speakers for making this workshop a huge success! </h5>
+      <h4> Congratulations to our joint best paper award winners </h4>
+
+      <div class="row mb-5">
+          <ul>
+            <li>Chanyoung Jung, Seungwook Lee, Hyunki Seong, Andrea Finazzi and David Hyunchul Shim, Game-Theoretic Model Predictive Control with Data-Driven Identification of Vehicle Model for Head-to-Head Autonomous Racing</li>
+            <li>Rongyao Wang, Yiqiang Han and Umesh Vaidya, Deep Koopman Data-driven Control Framework forAutonomous Racing</li>
+          </ul>
+     
+      </div>
+        <h5> Important Registration Dates:</h5>
+        <ul>
+          <li style="color:#C30000">
+            <font size="+1">Workshop-only option available: September 1, 2022 </font>
+          </li>
+          <li><s>Early registraion deadline: August 22, 2022 </s></li>
+          <li>Regular registration for conference: August 23 - October 27, 2022</li>
+        </ul>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <h5> Workshop-only registration fees:</h5>
+        <ul>
+          <li>10,000 JPY (~80 USD) for IEEE members</li>
+          <li>1,000 JPY (~8 USD) for IEEE student members</li>
+        </ul>
+        <h5> Publication Opportunities:</h5>
+        <p style="margin-left:2%">
+          Selected papers from the workshop will be considered for publication as part of a Research Topic in the
+          section of
+          <a href="https://www.frontiersin.org/journals/robotics-and-ai/sections/multi-robot-systems"
+            target="_blank">Multi-Robot Systems</a>
+          in the
+          <a href="https://www.frontiersin.org/journals/robotics-and-ai" target="_blank">Frontiers of Robotics and
+            AI</a>.
+          The papers will undergo a regular review
+          process prior to publication. More information regarding the submission process to this Research Topic will be
+          provided to the participants after the workshop.
+        </p>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="site-section" id="section-about">
+    <div class="container">
+
+      <div class="row mb-0 mt-5">
+
+        <div class="text-justify pb-1 border-primary mb-4">
+          <h2 class="text-primary">About this workshop</h2>
+        </div>
+        <p>
+          <font size="+1">In this workshop, we intend to bring together researchers from various disciplines (different areas of engineering, mathematics, and data science) working on the theory and applications of decentralized systems with large number of units or agents under a variety of system and evolution dynamics, information structures, performance criteria, and application areas. A common thread will be to understand the optimality and equilibrium behaviour, scaling behaviour with the number of agents, and learning dynamics; all in both the associated mathematical theory as well as in the context of emerging engineering and applied science applications. Due to the interdisciplinary nature of such problems involving optimal control, stochastic control, game theory, multi-agent systems, and robotics, we intend to establish connections between various formulations adopted in the community and bring researchers who have been using alternative setups, solutions approaches, and applications to allow for exchange of ideas and formulation of new research directions and collaborations. One other main goal of this workshop is to inspire a future generation of researchers in this vibrant field.
+          </font>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="site-section border-bottom" id="section-videos">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center border-primary">
+          <h2 class="font-weight-light text-primary" data-aos="fade">Video Recordings</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XezAX7OUjA0"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <h3>[Invited Session 1] Nora Ayanian - Multi-Agent Path Finding in Robotics</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+          <div class="person">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vs12kjqV7Bg"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <h3>[Invited Session 1] Peter Stone - The Value of Communication in Ad Hoc Teamwork</h3>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/d7u2NaoybTU"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <h3>[Invited Session 2] Sven Koenig - Multi-Agent Path Finding and Its Applications</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+          <div class="person">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4p7Sq--C_Zo"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <h3>[Invited Session 2] Huy Tran - On Utilities for Cooperative Multi-agent RL</h3>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AdTirNsguCk"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <h3>[Invited Session 3] Chi Jin - V-Learning --- A Simple, Efficient, Decentralized Algorithm for Multiagent
+              RL
+            </h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+          <div class="person">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Mm8BuQb3Mys"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <h3>[Invited Session 3] Bo An - Deep Learning for Solving Large Scale Complex Games</h3>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/b4FO1A6i4XY"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <h3>[Invited Session 4] Jakob Foerster - Opponent-Shaping and Interference in General-Sum Games</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+          <div class="person">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vaz5w-uo-EA"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <h3>[Invited Session 4] Amanda Prorok - Machine Learning for Multi-Agent and Multi-Robot Problems</h3>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hEQ0P4E7w0k"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <h3>Oral Presentations</h3>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div> -->
+
+  <div class="site-section border-bottom" id="section-speakers">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center border-primary">
+          <h2 class="font-weight-light text-primary" data-aos="fade">Invited Speakers</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <a href="https://tamerbasar.csl.illinois.edu/" target="_blank">
+              <img src="images/speakers/TamerBasar.jpeg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            </a>
+            <h3>Tamer Bașar</h3>
+            <p class="mb-4"> UIUC</p>
+            <ul class="ul-social-circle">
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+          <div class="person">
+            <a href="https://sites.google.com/view/karthikelamvazhuthi/home" target="_blank">
+              <img src="images/speakers/KarthikElamvazhuthi.jpeg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            </a>
+            <h3>Karthik Elamvazhuthi</h3>
+            <p class="mb-4">UC Riverside</p>
+            <ul class="ul-social-circle">
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+          <div class="person">
+            <a href="https://mlauriere.github.io/" target="_blank"><img src="images/speakers/MathieuLauriere.jpeg" alt="Image"
+                class="img-fluid rounded mb-5 w-75 rounded-circle"></a>
+
+            <h3>Mathieu Laurière</h3>
+            <p class="mb-4">NYU Shanghai</p>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <a href="https://adityam.github.io/" target="_blank"><img src="images/person_1.jpg"
+                alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle"></a>
+
+            <h3>Aditya Mahajan</h3>
+            <p class="mb-4">McGill University</p>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <a href="https://terpconnect.umd.edu/~nmartins/" target="_blank"><img src="images/speakers/NunoMartins.jpg" alt="Image"
+                class="img-fluid rounded mb-5 w-75 rounded-circle"></a>
+
+            <h3>Nuno Martins</h3>
+            <p class="mb-4">University of Maryland</p>
+            <ul class="ul-social-circle">
+              <!--li><a href="https://www.linkedin.com/in/madhurbehl/" target="_blank"><span class="icon-linkedin"></span></a></li-->
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+          <div class="person">
+            <a href="https://www.control.utoronto.ca/~pavel/" target="_blank"><img src="images/speakers/LacraPavel.jpg" alt="Image"
+                class="img-fluid rounded mb-5 w-75 rounded-circle"></a>
+
+            <h3>Lacra Pavel</h3>
+            <p class="mb-4">University of Toronto</p>
+            <ul class="ul-social-circle">
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+          <div class="person">
+            <a href="https://subramanian.engin.umich.edu/" target="_blank"><img
+                src="images/speakers/VijaySubramanian.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle"></a>
+
+            <h3>Vijay Subramanian</h3>
+            <p class="mb-4">University of Michigan</p>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <a href="https://dcsl.gatech.edu/tsiotras.html" target="_blank"><img src="images/person_2.jpg"
+                alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle"></a>
+
+            <h3>Panagiotis Tsiotras</h3>
+            <p class="mb-4">Georgia Tech</p>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <a href="https://mast.queensu.ca/~yuksel/" target="_blank"><img src="images/person_3.jpg"
+                alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle"></a>
+
+            <h3>Serdar Yüksel</h3>
+            <p class="mb-4">Queen's University</p>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="site-section" id="section-program">
+    <div class="container">
+      <div class="row mb-0">
+        <div class="text-justify pb-1 border-primary mb-4">
+          <h2 class="text-primary">Workshop schedule</h2>
+        </div>
+      </div>
+
+      <div class="row mt-0">
+        <font size="4" face="Helvetica">
+          <table width="100%">
+            <tbody>
+              <tr>
+                <td class="left-col" style="color:navy"></td> <br>
+                <td style="color:maroon">All times in CET (UTC + 01)</td>
+              </tr>
+              <tr>
+                <td class="left-col" style="color:navy">8:30a</td> <br>
+                <td style="color:navy">Opening Remarks</td>
+              </tr>
+              <tr>
+                <td class="left-col" style="color:navy">8:40a</td>
+                <td style="color:navy">Invited Session 1</td>
+              </tr>
+              <tr>
+                <td>8:40-9:20a</td>
+                <td>
+                  <div class="collapsible">Tamer Basar (UIUC) - Large Population Games with Hybrid Modes of Behavior</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      <font size="-0.5">
+                      Decision making in dynamic uncertain environments with multiple agents arises in many disciplines and application domains, including control, communications, distributed optimization, social networks, and economics. Here, a natural framework, and a comprehensive one, for modeling, optimization, and analysis is the one provided by stochastic dynamic games (SDGs), which accommodates different solution concepts depending on how the interactions among the agents are modeled, particularly whether they are in a cooperative mode (with the same objective functions, as in teams) or in a noncooperative mode (with different objective functions) or a mix of the two, such as teams of agents interacting noncooperatively across different teams (and of course cooperatively within each team). What also affects (strategic) interactions is the asymmetric nature of the information different agents acquire (and do not share or partially share selectively with each other, even within teams), and all this leads to appropriate notions of equilibria tailored to the game at hand. This talk will first discuss the challenges that arise in addressing SDGs with such generality, and then identify a special class of such SDGs that are manageable in the sense of leading to derivation of exact or approximate equilibria. One such subclass of SDGs is characterized by a finite (relatively small) number of competing teams, and with each team having a large population of (possibly indistinguishable) agents with possibly imperfect state measurements. The main focus of this part of the talk will be on linear-quadratic structures.
+                    </font>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>9:20-10:00a</td>
+                <td>
+                  <div class="collapsible">Karthik Elamvazhuthi (UCLA) - Mean-Field Stabilization of Control-Affine Systems to Probability Densities</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      <font size="-0.5">
+                      In this talk, we will explore the set of configurations that can be stabilized in the control of large robot swarms with limited sensing. We analyze the stationary distributions of degenerate diffusion processes associated with control-affine systems, which leads to studying the stability of governing partial differential equations. First, we consider the case without mean-field terms. We then show how including mean-field interactions can expand the class of stabilizable distributions. Importantly, the mean-field limit allows us to achieve global stability of target configurations, unlike treatments for finite particles. These results provide insights into the fundamental capabilities and limits of decentralized control for emergent collective behaviors in large-scale robotic systems.
+                    </font>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>10:00-10:40a</td>
+                <td>
+                  <div class="collapsible">Mathieu Lauriere (NYU Shanghai) - Deep Reinforcement Learning for Mean-field Type Games</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      <font size="-0.5">
+                        Mean field games have been introduced to study Nash equilibria in games with a very large number of players. The standard theory focuses on a homogenous population of non-cooperative players. Several extensions have been proposed, such as mean-field type games, which study Nash equilibria between competitive coalitions of mean-field type: the players are cooperative among each group, but they compete with other groups. The limit when the number of coalitions tends to infinity has been studied under the name of mean field control games. In this talk, we present some (deep) reinforcement learning methods for such games with a finite or infinite number of coalitions.
+                    </font>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>10:40-11:00a</td>
+                <td>Break</td>
+              </tr>
+              <tr>
+                <td class="left-col" style="color:navy">11:00a</td>
+                <td style="color:navy">Invited Session 2</td>
+              </tr>
+              <tr>
+                <td>11:00-11:40a</td>
+                <td>
+                  <div class="collapsible">Aditya Mahajan (McGill) - Mean-Field Games Among Teams</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      <font size="-0.5">
+                      In this talk, we present a model of a game among teams. Each team consists of a homogeneous population of agents. Agents within a team are cooperative while the teams compete with other teams. The dynamics and the costs are coupled through the empirical distribution (or the mean field) of the state of agents in each team, which is assumed to be observed by all agents. Agents have asymmetric information (also called a non-classical information structure). We propose a mean-field based refinement of the Team-Nash equilibrium of the game, which we call mean-field Markov perfect equilibrium (MF-MPE). We identify a dynamic programming decomposition to characterize MF-MPE. We then consider the case where each team has a large number of players and present a mean-field approximation that approximates the game among large-population teams as a game among infinite-population teams. We show that the MF-MPE of the game among teams of infinite population is easier to compute and is an ε-approximate MF-MPE of the game among teams of finite population.
+                    </font>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>11:40-12:20p</td>
+                <td>
+                  <div class="collapsible">Nuno Martins (UMD) - Incentive Design and Learning in Large Populations: A System- Theoretic Approach With Applications To Epidemic Mitigation</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      <font size="-0.5">
+                        This talk will introduce a systematic method for designing incentive mechanisms aimed at influencing large groups of strategic agents (both synthetic and human) towards desirable behaviors. Utilizing concepts from population games, the agents’ reactions to incentives and environmental factors are modeled using simple learning rules. Their behaviors, which evolve over time, are represented through a deterministic evolutionary model, creating a nonlinear feedback system with the incentive mechanisms. This analysis employs control systems tools and includes a novel subsystem interaction, such as an epidemic influenced by the agents’ strategies. A new two-step design approach based on system-theoretic passivity is proposed for creating incentive mechanisms. The first step involves selecting an optimal equilibrium with cost considerations, and the second step focuses on designing a control mechanism to stabilize this equilibrium. The approach is noted for its generality and robustness, functioning effectively even when agents are unaware of the incentive mechanisms and precise learning rules are unknown.
+                    </font>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="left-col" style="color:navy">12:20 -1:50p</td>
+                <td style="color:navy">Lunch & Poster Session</td>
+              </tr>
+              <tr>
+                <td class="left-col" style="color:navy">1:50p</td>
+                <td style="color:navy">Invited Session 3</td>
+              </tr>
+              <tr>
+                <td>1:50-2:30P</td>
+                <td>
+                  <div class="collapsible">Lacra Pavel (U Toronto) - Higher-order Learning in Multi-Agent Games</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      <font size="-0.5">
+                        We consider the effect that higher-order learning can have in the context of Mirror descent (MD), a progenitor of many decision processes. While MD converges to the Nash equilibrium (NE) of many games, possibly under limited or uncertain feedback, many applications are characterized by conditions for which MD fails to equilibrate, namely, games with non-strict monotonicity or non-strict variationally stable state. We discuss the design of a set of theoretically-guided methodologies that overcome these convergence barriers, in particular through higher-order variants, designed through a passivity lens. We then consider discrete- time algorithms extracted from these which provide convergence guarantees in two challenging setups: the semi-bandit case, where an agent’s feedback is corrupted by Martingale-difference noise, and the full-bandit case, where each agent only receives a payoff signal that indicates its current performance. Illustrative examples are drawn from several recent applications arising from game-theoretic machine learning, such as the generation of adversarial attacks and generative adversarial networks.
+                    </font>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2:30-3:10p</td>
+                <td>
+                  <div class="collapsible">Vijay Subramanian (UMich) - Dynamic Games Among Teams with Delayed Intra-Team Information Sharing
+                  </div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      <font size="-0.5">
+                        We analyze a class of stochastic dynamic games among teams with asymmetric information, where members of a team share their observations internally with a delay of d. Each team is associated with a controlled Markov Chain, whose dynamics are coupled through the players’ actions. These games exhibit challenges in both theory and practice due to the presence of signaling and the increasing domain of information over time. We develop a general approach to characterize a subset of Nash Equilibria where the agents can use a compressed version of their information, instead of the full information, to choose their actions. We identify two subclasses of strategies: Sufficient Private Information Based (SPIB) strategies, which only compress private information, and Compressed Information Based (CIB) strategies, which compress both common and private information. We show that while SPIB-strategy-based equilibria always exist, the same is not true for CIB-strategy-based equilibria. We develop a backward inductive sequential procedure, whose solution (if it exists) provides a CIB strategy- based equilibrium. We identify some instances where we can guarantee the existence of a solution to the above procedure. Our results highlight the tension among compression of in- formation, the existence of (compression-based) equilibria, and backward inductive sequential computation of such equilibria in stochastic dynamic games with asymmetric information.
+                    </font>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3:10-3:30p</td>
+                <td>Break</td>
+              </tr>
+              <tr>
+                <td class="left-col" style="color:navy">13:30p</td>
+                <td style="color:navy">Invited Session 4</td>
+              </tr>
+              <tr>
+                <td>3:30-4:10p</td>
+                <td>
+                  <div class="collapsible">Panagiotis Tsiotras (Georgia Tech) - Zero-Sum Games Between Large-Population Teams under Mean-Field Sharing</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      <font size="-0.5">
+                        In this talk, we will investigate the behaviors of two large population teams competing in a discrete environment, The team-level interactions are modeled as a zero-sum game, while the dynamics within each team are formulated as a collaborative mean-field team problem. Following the mean-field literature, we first approximate the large-population team game with its infinite-population limit. By introducing two fictitious coordinators we transform the infinite-population game into an equivalent zero-sum coordinator game. We study the optimal strategies for each team for the infinite population limit via a novel reachability analysis, and we show that the obtained team strategies are decentralized and are ε-optimal for the original finite-population game. We will provide extensions to heterogeneous team scenarios. Finally, we discuss the ramifications of this result for agent training in large-population multi-agent reinforcement learning (MARL) problems.
+                    </font>
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>4:10-4:50p</td>
+                <td>
+                  <div class="collapsible">Serdar Yüksel (Queen's University) - Equivalence between Controlling a Large Population and a Representative Agent: Optimality, Learning, and Games (among Teams)</div>
+                  <div class="hidden-content">
+                    <p style="margin-top:8pt; margin-bottom:7pt; text-align:justify">
+                      <b>
+                        <font size="+1">Abstract:</font>
+                      </b>
+                      <font size="-0.5">
+                        We study stochastic exchangeable teams comprising a finite number of decision-makers (DMs) as well as their mean-field limits under centralized, mean-field sharing, or fully decentralized information structures. i) For finite population exchangeable teams, we establish the existence of a a randomized optimal policy that is exchangeable (permutation invariant). This optimal policy is obtained via value iterations for an equivalent measure-valued controlled Markov decision problem (MDP) under mean-field sharing; ii) We show that a sequence of exchangeable optimal policies for a finite population setting converges to an optimal policy for the infinite population problem which is conditionally symmetric (identical), independent, and decentralized. This result also proves the optimality of the limiting measure-valued MDP for the representative DM. This solves, to our knowledge, an open question on the optimality of symmetric policies which is often apriori assumed in the mean-field control literature.
+                        <br>
+                        Three implications will be discussed: (i) Near optimality via quantized approximations to facilitate computations as well as near optimality for large finite numbers of agents. (ii) Implications on the convergence of decentralized Q-learning with local information where it will be shown that decentralized learners with local information are guaranteed to converge to some equilibrium, which can be an objective one, but also a subjective one in the absence of uniqueness of equilibria. (ii) We also discuss an application to games among a finite number of large teams. We again show that a Nash equilibrium exhibits exchangeability in the finite decision-maker regime and symmetry in the infinite one. We endow the set of randomized policies with a suitable topology under various decentralized information structures, which leads to the desired convexity and compactness of the sets of randomized policies leading to a randomized Nash equilibrium that is exchangeable among decision makers within each team and as the number of decision-makers within each team goes to infinity (that is for the mean-field game among teams), using a de Finetti representation theorem, we show existence of a randomized Nash equilibrium that is symmetric (i.e., identical) among decision makers within each team and also independently randomized. We thus show that common randomness is not necessary for large team-against-team games, unlike the case with small-sized teams. The zero-sum game will also be discussed with more relaxed conditions.
+                    </font>
+                    </p>
+                  </div>
+                </td>
+                <tr>
+                  <td class="left-col" style="color:navy">4:50-5:30p</td>
+                  <td style="color:navy">Poster Session & Open Discussion</td>
+                </tr>
+
+            </tbody>
+          </table>
+        </font>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="site-section" id="section-papers">
+    <div class="container">
+      <div class="row mb-0">
+        <div class="text-justify pb-1 border-primary mb-4">
+          <h2 class="text-primary">Contributed Posters</h2>
+        </div>
+      </div>
+      <h5 style="color:navy"> TBA</h5>
+      <!-- <h5 style="color:navy"> Oral Presentation</h5> -->
+      <!-- <font size="4" face="Helvetica">
+        <table width="100%">
+          <tbody>
+            <tr>
+              <td>[#1]</td>
+              <td>Oliver Järnefelt and Carlo D'Eramo, <em style="color:maroon">Modular Value Function Factorization in
+                  Multi-Agent Reinforcement Learning</em><br> <a href="contributed_papers/IROS22-DMMAS_paper_5267.pdf"
+                  target="_blank"> [Link to Paper]</a><a href="posters/DMMAS_5267.pdf" target="_blank"> [Link to
+                  Poster]</a></td>
+            </tr>
+            <tr>
+              <td>[#2]</td>
+              <td>Charles Jin, Zhang-Wei Hong and Martin Rinard, <em style="color:maroon">Toward Capability-Aware
+                  Cooperation for Decentralized Planning</em> <br><a
+                  href="contributed_papers/IROS22-DMMAS_paper_7852.pdf" target="_blank"> [Link to Paper]</a>
+              </td>
+            </tr>
+            <tr>
+              <td>[#3]</td>
+              <td>Yuchen Xiao, Weihao Tan and Christopher Amato, <em style="color:maroon">Asynchronous Actor-Critic for
+                  Multi-Agent Reinforcement Learning</em> <br><a href="contributed_papers/IROS22-DMMAS_paper_5233.pdf"
+                  target="_blank"> [Link to Paper]</a>
+              </td>
+            </tr>
+            <tr>
+              <td>[#4]</td>
+              <td>Qin Yang and Ramviyas Parasuraman, <em style="color:maroon">A Game-theoretic Utility Network for
+                  Cooperative Multi-Agent Decisions in Adversarial Environments</em> <a
+                  href="contributed_papers/IROS22-DMMAS_paper_6456.pdf" target="_blank"> [Link
+                  to Paper]</a><a href="posters/DMMAS_6456.pdf" target="_blank"> [Link to Poster]</a></td>
+            </tr>
+            <tr>
+              <td>[#5]</td>
+              <td>Vincenzo Polizzi, Robert Hewitt, Javier Hidalgo-Carrió, Jeff Delaune and Davide Scaramuzza, <em
+                  style="color:maroon">Data-Efficient Collaborative Decentralized Thermal-Inertial Odometry</em> <a
+                  href="contributed_papers/IROS22-DMMAS_paper_9593.pdf" target="_blank">
+                  [Link to Paper]</a><a href="posters/DMMAS_9593.pdf" target="_blank"> [Link to Poster]</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </font> -->
+      <!-- <br> -->
+      <!-- <h5 style="color:navy"> Posters</h5> -->
+      <!-- <font size="4" face="Helvetica">
+        <table width="100%">
+          <tbody>
+            <tr>
+              <td>[#6]</td>
+              <td>Niels van Duijkeren, Luigi Palmieri, Ralph Lange and Alexander Kleiner, <em style="color:maroon">An
+                  Industrial Perspective on Multi-Agent Decision Making for Interoperable Robot Navigation following the
+                  VDA5050 Standard</em> <a href="contributed_papers/IROS22-DMMAS_paper_3613.pdf" target="_blank"> [Link
+                  to Paper]</a><a href="posters/DMMAS_3613.pdf" target="_blank"> [Link to Poster]</a>
+              </td>
+            </tr>
+            <tr>
+              <td>[#7]</td>
+              <td>Simon Schaefer, Luigi Palmieri, Lukas Heuer, Niels van Duijkeren, Ruediger Dillmann, Sven Koenig and
+                Alexander Kleiner, <em style="color:maroon">Towards Reliable Benchmarking for Multi-Robot Planning in
+                  Realistic, Cluttered and Complex Environments</em> <a
+                  href="contributed_papers/IROS22-DMMAS_paper_6093.pdf" target="_blank"> [Link to Paper]</a><a
+                  href="posters/DMMAS_6093.pdf" target="_blank"> [Link to Poster]</a></td>
+            </tr>
+            <tr>
+              <td>[#8]</td>
+              <td>Dipanwita Guhathakurta, Fatemeh Rastgar, M Aditya Sharma, Madhava Krishna and Arun Kumar Singh, <em
+                  style="color:maroon">GPU Acceleration of Joint Multi-Agent Trajectory Optimization</em> <a
+                  href="contributed_papers/IROS22-DMMAS_paper_5205.pdf" target="_blank"> [Link to Paper]</a><a
+                  href="posters/DMMAS_5205.pdf" target="_blank"> [Link to Poster]</a></td>
+              </td>
+            </tr>
+            <tr>
+              <td> [#9]</td>
+              <td>Bilal Maassarani, Kevin Garanger and Eric Feron, <em style="color:maroon">The TetraheDrone: A
+                  Structured Fractal HFW-VTOL UAS</em> <a href="contributed_papers/IROS22-DMMAS_paper_9553.pdf"
+                  target="_blank"> [Link to Paper]</a>
+                <a href="posters/DMMAS_9553.pdf" target="_blank"> [Link to Poster]</a>
+              </td>
+            </tr>
+            <tr>
+              <td>[#10]</td>
+              <td> Khaled Wahba and Wolfgang Hönig, <em style="color:maroon">Distributed Geometric and
+                  Optimization-based Control of Multiple Quadrotors for Cable-Suspended Payload Transport</em> <a
+                  href="contributed_papers/IROS22-DMMAS_paper_1100.pdf" target="_blank"> [Link to Paper]</a><a
+                  href="posters/DMMAS_1100.pdf" target="_blank"> [Link to Poster]</a></td>
+            </tr>
+            <tr>
+              <td>[#11]</td>
+              <td>Ziyi Zhou and Ye Zhao, <em style="color:maroon">Leveraging Quadrupedal Robots in Heterogeneous
+                  Multi-Robot Teaming with Run-Time Disturbances</em> <a
+                  href="contributed_papers/IROS22-DMMAS_paper_3606.pdf" target="_blank"> [Link to Paper]</a>
+                <a href="posters/DMMAS_3606.pdf" target="_blank"> [Link to Poster]</a>
+              </td>
+            </tr>
+            <tr>
+              <td>[#12]</td>
+              <td>Brian Reily, Bradley Woosley, John Rogers and Christopher Reardon, <em
+                  style="color:maroon">Multi-Agent Perimeter Monitoring for Uncertainty Reduction</em> <a
+                  href="contributed_papers/IROS22-DMMAS_paper_4451.pdf" target="_blank"> [Link to
+                  Paper]</a>
+                <a href="posters/DMMAS_4451.pdf" target="_blank"> [Link to Poster]</a>
+              </td>
+            </tr>
+            <tr>
+              <td>[#13]</td>
+              <td>Harel Biggie and Christoffer Heckman, <em style="color:maroon">Towards Reducing Human Supervision in
+                  Fielded Multi-Agent Systems</em> <br> <a href="contributed_papers/IROS22-DMMAS_paper_1627.pdf"
+                  target="_blank"> [Link
+                  to Paper]</a><a href="posters/DMMAS_1627.pdf" target="_blank"> [Link to Poster]</a></td>
+            </tr>
+            <tr>
+              <td>[#14]</td>
+              <td>Seth Karten and Katia Sycara, <em style="color:maroon">Intent-Grounded Compositional Communication
+                  through Mutual Information in Multi-Agent Teams</em> <a
+                  href="contributed_papers/IROS22-DMMAS_paper_5730.pdf" target="_blank"> [Link
+                  to Paper]</a><a href="posters/DMMAS_5730.pdf" target="_blank"> [Link to Poster]</a></td>
+            </tr>
+            <tr>
+              <td>[#15]</td>
+              <td>Mingi Jeong, Julien Blanchet, Joseph Gatto and Alberto Quattrini Li, <em style="color:maroon">A
+                  Hierarchical Multi-ASV Control System Framework for Adversarial ASV Detainment</em> <a
+                  href="contributed_papers/IROS22-DMMAS_paper_6832.pdf" target="_blank"> [Link
+                  to Paper]</a><a href="posters/DMMAS_6832.pdf" target="_blank"> [Link to Poster]</a></td>
+            </tr>
+            <tr>
+              <td>[#16]</td>
+              <td>Andreas Kokkas, Micael Couceiro, Ivan Doria, Andre Araújo and Jose Rosa, <em
+                  style="color:maroon">Towards the Next Generation of Multi-Robot Systems for Solar Power Plants
+                  Inspection and Maintenance</em> <a href="contributed_papers/IROS22-DMMAS_paper_9239.pdf"
+                  target="_blank"> [Link
+                  to Paper]</a><a href="posters/DMMAS_9239.pdf" target="_blank"> [Link to Poster]</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </font> -->
+
+    </div>
+  </div>
+
+
+  <!--div class="site-section bg-image overlay" style="background-image: url('images/hero_bg_4.jpg');" id="section-how-it-works">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary" data-aos="fade">How It Works</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+            <div class="how-it-work-item">
+              <span class="number">1</span>
+              <div class="how-it-work-body">
+                <h2>Make An Order</h2>
+                <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.</p>
+                <ul class="ul-check list-unstyled success">
+                  <li class="text-white">Error minus sint nobis dolor</li>
+                  <li class="text-white">Voluptatum porro expedita labore esse</li>
+                  <li class="text-white">Voluptas unde sit pariatur earum</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+            <div class="how-it-work-item">
+              <span class="number">2</span>
+              <div class="how-it-work-body">
+                <h2>Make A Payment</h2>
+                <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.</p>
+                <ul class="ul-check list-unstyled success">
+                  <li class="text-white">Error minus sint nobis dolor</li>
+                  <li class="text-white">Voluptatum porro expedita labore esse</li>
+                  <li class="text-white">Voluptas unde sit pariatur earum</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="how-it-work-item">
+              <span class="number">3</span>
+              <div class="how-it-work-body">
+                <h2>Track Your Order</h2>
+                <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.</p>
+                <ul class="ul-check list-unstyled success">
+                  <li class="text-white">Error minus sint nobis dolor</li>
+                  <li class="text-white">Voluptatum porro expedita labore esse</li>
+                  <li class="text-white">Voluptas unde sit pariatur earum</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div-->
+
+
+
+  <div class="site-section border-bottom" id="section-organizers">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center border-primary">
+          <h2 class="font-weight-light text-primary" data-aos="fade">Organizers</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="person">
+            <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Aditya Mahajan</h3>
+            <p class="position">Professor</p>
+            <p class="mb-4"> Department of Electrical and Computer Engineering <br> McGill University </p>
+            <ul class="ul-social-circle">
+              <!--li><a href="https://www.linkedin.com/in/ptsiotras/" target="_blank"><span class="icon-linkedin"></span></a></li-->
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+          <div class="person">
+            <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Panagiotis Tsiotras</h3>
+            <p class="position">Professor</p>
+            <p class="mb-4">School of Aerospace Engineering <br> Georgia Institute of Technology</p>
+            <ul class="ul-social-circle">
+              <!--li><a href="https://www.linkedin.com/in/johannes-betz-254049107/" target="_blank"><span class="icon-linkedin"></span></a></li-->
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+          <div class="person">
+            <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+            <h3>Serdar Yüksel</h3>
+            <p class="position">Professor</p>
+            <p class="mb-4">Department of Mathematics and Statistics <br> Queen's University</p>
+            <ul class="ul-social-circle">
+              <!--li><a href="https://www.linkedin.com/in/yue-guan-7177a5b6/" target="_blank"><span class="icon-linkedin"></span></a></li-->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <br>
+      <div class="text-justify pb-1 border-primary mb-4">
+        <h2 class="text-primary">Program Committee</h2>
+      </div>
+      <div class="row mb-5">
+        <br>
+        <ul>
+          <li>TBD</li>
+        </ul>
+
+      </div> -->
+
+      <div class="text-justify pb-1 border-primary mb-4">
+        <h2 class="text-primary">Contact</h2>
+      </div>
+      <div class="row mb-5">
+        <p>
+          <font size="+1"> &nbsp&nbsp&nbspIf you have any question regarding the workshop, please contact the <a
+              href="mailto: tsiotras@gatech.edu">Workshop Organizers</a>. </font>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- <div class="site-section" id="section-cfp">
+    <div class="container">
+      <div class="row mb-5 mt-0">
+
+        <div class="text-justify pb-1 border-primary mb-4">
+          <h2 class="text-primary">Call for Contributions</h2>
+        </div>
+        <p>Efficient decision-making, in robotics, game-playing, social agents, etc., can be considered an essential
+          aspect and a challenging problem in multi-agent systems, and contributions here have the potential making a
+          breakthrough in enabling
+          high-performing collaborative and coordinated multi-agent teams. For a successful multi-agent collaboration in
+          a complex (potentially adversarial) environment, agents must be able to rationalize their actions by reasoning
+          about their
+          teammates' action-decisions and their capabilities and characteristics, as well as the environment states
+          under partial observability. Such enhanced reasoning can also be achieved through efficient inter-agent
+          communication, which
+          opens a new horizon to the realm of multi-agent decision-making. These problems make an interesting
+          opportunity to explore multi-agent systems under collaborative and mixed collaborative-competitive settings to
+          improve team coordination
+          for high-quality cooperation.
+        </p>
+        <br>
+        <p>The objective of this workshop is to raise awareness of the overall challenges in multi-agent decision-making
+          area to the IEEE Robotics and Automation Society community. This workshop will serve as a catalyst to exchange
+          ideas and recent
+          methodologies in this this unique and important application, that requires innovations across core topics in
+          robotics, AI, and ML.
+        </p>
+        <br>
+        <h2>Topics of Interest</h2>
+        <ul>
+          <li>Multi-agent reinforcement learning</li>
+          <li>Multi-agent planning and scheduling</li>
+          <li>Multi-agent systems in adversarial environments</li>
+          <li>Bounded rationality</li>
+          <li>Heterogeneous team coordination</li>
+          <li>Emergent communication learning in multi-agent systems</li>
+          <li>Multi-agent systems and challenges: scalability, credit assignment, non-stationarity, etc.</li>
+          <li>Multi-agent decision-making and Transformers: decision-making as a sequence modeling problem </li>
+          <li>Multi-agent decisions and Social dilemmas</li>
+          <li>Explainable multi-agent decision-making</li>
+        </ul>
+
+      </div>
+
+      <div class="row mb-5">
+
+        <div class="text-justify pb-1 border-primary mb-4">
+          <h2 class="text-primary">Paper Submission:</h2>
+        </div>
+        <p>We invite short papers (4-6 pages, including references) for submission to the workshop related to the topics
+          above and the theme of multi-agent systems. Position papers, work in progress and novel but not necessarily
+          thoroughly worked
+          out ideas are encouraged. The submissions will be reviewed by the program committee and we will accept papers
+          for oral (live) presentations, or a video highlight. Each paper will undergo a thorough review process and
+          receive two high
+          quality reviews. Accepted papers will be made available on the workshop website after the IROS conference.</p>
+        <br>
+        <p>The paper should be in PDF format and use the standard IEEE IROS template: <a
+            href="http://ras.papercept.net/conferences/support/tex.php"> Tex</a> or <a
+            href="http://ras.papercept.net/conferences/support/word.php"> MS Word</a>.</p>
+
+        <br>
+        <p> Please use the following EasyChair link for paper submissions: <a
+            href="https://easychair.org/conferences/?conf=iros22dmmas" target="_blank"> Submission Link </a>. </p>
+
+      </div>
+
+      <h2>Important Dates</h2>
+      <ul>
+        <li>Submission site opens: July 5, 2022</li>
+        <li><s>Submission deadline: September 15, 2022 (GMT -12)</s></li>
+        <li>Deadline extended to: <font style="color:#C30000">October 3, 2022 (GMT -12)</font>
+        </li>
+        <li>Notice of Acceptance: <s>October 10, 2022</s>
+          <font style="color:#C30000">October 18</font>
+        </li>
+      </ul>
+
+
+    </div>
+  </div> -->
+
+
+
+  <!-- <div class="site-section bg-light" id="section-sponsors">
+    <div class="container">
+      <div class="row justify-content-center mb-5" data-aos="fade-up">
+        <div class="col-md-10 text-center border-primary">
+          <h2 class="mb-0 text-primary">Sponsors</h2>
+          <h4 class="color-black-opacity-5">This workshop is supported by the <strong>IEEE RAS TC on Multi-Robot
+              Systems</strong> and the <strong>IEEE RAS TC on Algorithms for Planning and Control of Robot
+              Motion.</strong></h4>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div> -->
+
+
+
+
+  <!--div class="site-section block-13" id="section-industries">
+
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="mb-0 text-primary">Industries</h2>
+            <p class="color-black-opacity-5">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="owl-carousel nonloop-block-13">
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Storage</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Air Transports</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="images/img_3.jpg" alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Cargo Transports</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="images/img_4.jpg" alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Cargo Ship</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="images/img_5.jpg" alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Ware Housing</h3>
+            </div>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(images/hero_bg_2.jpg); background-attachment: fixed;">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+
+          <div class="col-md-7" data-aos="fade-up">
+            <a href="https://vimeo.com/channels/staffpicks/93951774" class="play-single-big mb-4 d-inline-block popup-vimeo"><span class="icon-play"></span></a>
+            <h2 class="text-white font-weight-light mb-5 h1">Watch The Video</h2>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section border-bottom">
+      <div class="container">
+
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">Testimonials</h2>
+          </div>
+        </div>
+
+        <div class="slide-one-item home-slider owl-carousel">
+          <div>
+            <div class="testimonial">
+              <figure class="mb-4">
+                <img src="images/person_1.jpg" alt="Image" class="img-fluid mb-3">
+
+              </figure>
+              <blockquote>
+                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+                <p class="author"> &mdash; John Trump</p>
+              </blockquote>
+            </div>
+          </div>
+          <div>
+            <div class="testimonial">
+              <figure class="mb-4">
+                <img src="images/person_2.jpg" alt="Image" class="img-fluid mb-3">
+
+              </figure>
+              <blockquote>
+                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+                <p class="author"> &mdash; Roger Moore</p>
+              </blockquote>
+            </div>
+          </div>
+
+          <div>
+            <div class="testimonial">
+              <figure class="mb-4">
+                <img src="images/person_4.jpg" alt="Image" class="img-fluid mb-3">
+              </figure>
+              <blockquote>
+                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+                <p class="author"> &mdash; Ben Carson</p>
+              </blockquote>
+            </div>
+          </div>
+
+          <div>
+            <div class="testimonial">
+              <figure class="mb-4">
+                <img src="images/person_5.jpg" alt="Image" class="img-fluid mb-3">
+              </figure>
+              <blockquote>
+                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+                <p class="author"> &mdash; Jed Smith</p>
+              </blockquote>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section" id="section-blog">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">Our Blog</h2>
+            <p class="color-black-opacity-5">See Our Daily News &amp; Updates</p>
+          </div>
+        </div>
+        <div class="row mb-5 align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="h-entry">
+              <img src="images/blog_1.jpg" alt="Image" class="img-fluid">
+              <h2 class="font-size-regular"><a href="#">How Logistics Company Improve Spendings</a></h2>
+              <div class="meta mb-4">by Jed Wilson <span class="mx-2">&bullet;</span> Jan 18, 2019 <span class="mx-2">&bullet;</span> <a href="#">News</a></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-entry">
+              <img src="images/blog_2.jpg" alt="Image" class="img-fluid">
+              <h2 class="font-size-regular"><a href="#">How Logistics Company Improve Spendings</a></h2>
+              <div class="meta mb-4">by Jed Wilson <span class="mx-2">&bullet;</span> Jan 18, 2019 <span class="mx-2">&bullet;</span> <a href="#">News</a></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="h-entry">
+              <img src="images/blog_3.jpg" alt="Image" class="img-fluid">
+              <h2 class="font-size-regular"><a href="#">How Logistics Company Improve Spendings</a></h2>
+              <div class="meta mb-4">by Jed Wilson <span class="mx-2">&bullet;</span> Jan 18, 2019 <span class="mx-2">&bullet;</span> <a href="#">News</a></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="300">
+            <p class="mb-0"><a href="https://free-template.co" class="btn btn-primary py-3 px-5 text-white">View All Blog Posts</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-light" id="section-contact">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">Contact Us</h2>
+            <p class="color-black-opacity-5">See Our Daily News &amp; Updates</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7 mb-5">
+
+
+
+            <form action="#" class="p-5 bg-white">
+
+
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">First Name</label>
+                  <input type="text" id="fname" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="lname">Last Name</label>
+                  <input type="text" id="lname" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label>
+                  <input type="email" id="email" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Subject</label>
+                  <input type="subject" id="subject" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="message">Message</label>
+                  <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Send Message" class="btn btn-primary py-2 px-4 text-white">
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+          <div class="col-md-5">
+
+            <div class="p-4 mb-3 bg-white">
+              <p class="mb-0 font-weight-bold">Address</p>
+              <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+
+              <p class="mb-0 font-weight-bold">Phone</p>
+              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+
+              <p class="mb-0 font-weight-bold">Email Address</p>
+              <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+
+            </div>
+
+            <div class="p-4 mb-3 bg-white">
+              <h3 class="h5 text-black mb-3">More Info</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed nulla.</p>
+              <p><a href="#" class="btn btn-primary px-4 py-2 text-white">Learn More</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div-->
+
+
+  <!--footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-5 mr-auto">
+                <h2 class="footer-heading mb-4">About Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iure deserunt ut architecto dolores quo beatae laborum aliquam ipsam rem impedit obcaecati ea consequatur.</p>
+              </div>
+
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Follow Us</h2>
+                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+            <form action="#" method="post">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>
+              <small class="block">&copy; <script>document.write(new Date().getFullYear());</script> Logis Free Template. All Rights Reserved. <br> Designed &amp; Developed by <a href="https://free-template.co/" target="_blank">Free-Template.co</a></small>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer-->
+  <!-- </div> -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+
+    Array.from(coll).forEach((col, i) => {
+      col.addEventListener("click", function () {
+        this.classList.toggle("active");
+        showHideRow(`hidden-content`, i);
+      });
+    });
+
+    function showHideRow(className, index) {
+      var content = document.getElementsByClassName(className)[index];
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
