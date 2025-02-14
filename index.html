@@ -343,6 +343,7 @@
                       Decision making in dynamic uncertain environments with multiple agents arises in many disciplines and application domains, including control, communications, distributed optimization, social networks, and economics. Here, a natural framework, and a comprehensive one, for modeling, optimization, and analysis is the one provided by stochastic dynamic games (SDGs), which accommodates different solution concepts depending on how the interactions among the agents are modeled, particularly whether they are in a cooperative mode (with the same objective functions, as in teams) or in a noncooperative mode (with different objective functions) or a mix of the two, such as teams of agents interacting noncooperatively across different teams (and of course cooperatively within each team). What also affects (strategic) interactions is the asymmetric nature of the information different agents acquire (and do not share or partially share selectively with each other, even within teams), and all this leads to appropriate notions of equilibria tailored to the game at hand. This talk will first discuss the challenges that arise in addressing SDGs with such generality, and then identify a special class of such SDGs that are manageable in the sense of leading to derivation of exact or approximate equilibria. One such subclass of SDGs is characterized by a finite (relatively small) number of competing teams, and with each team having a large population of (possibly indistinguishable) agents with possibly imperfect state measurements. The main focus of this part of the talk will be on linear-quadratic structures.
                     </font>
                     </p>
+                     <a href="./speaker%20slides/Başar.pdf" target="_blank">slides</a>
                   </div>
                 </td>
               </tr>
@@ -361,6 +362,7 @@
                         Three implications will be discussed: (i) Near optimality via quantized approximations to facilitate computations as well as near optimality for large finite numbers of agents. (ii) Implications on the convergence of decentralized Q-learning with local information where it will be shown that decentralized learners with local information are guaranteed to converge to some equilibrium, which can be an objective one, but also a subjective one in the absence of uniqueness of equilibria. (ii) We also discuss an application to games among a finite number of large teams. We again show that a Nash equilibrium exhibits exchangeability in the finite decision-maker regime and symmetry in the infinite one. We endow the set of randomized policies with a suitable topology under various decentralized information structures, which leads to the desired convexity and compactness of the sets of randomized policies leading to a randomized Nash equilibrium that is exchangeable among decision makers within each team and as the number of decision-makers within each team goes to infinity (that is for the mean-field game among teams), using a de Finetti representation theorem, we show existence of a randomized Nash equilibrium that is symmetric (i.e., identical) among decision makers within each team and also independently randomized. We thus show that common randomness is not necessary for large team-against-team games, unlike the case with small-sized teams. The zero-sum game will also be discussed with more relaxed conditions.
                     </font>
                     </p>
+                     <a href="./speaker%20slides/Yuksel.pdf" target="_blank">slides</a>
                   </div>
                 </td>
               </tr>
@@ -377,6 +379,7 @@
                         Mean field games have been introduced to study Nash equilibria in games with a very large number of players. The standard theory focuses on a homogenous population of non-cooperative players. Several extensions have been proposed, such as mean-field type games, which study Nash equilibria between competitive coalitions of mean-field type: the players are cooperative among each group, but they compete with other groups. The limit when the number of coalitions tends to infinity has been studied under the name of mean field control games. In this talk, we present some (deep) reinforcement learning methods for such games with a finite or infinite number of coalitions.
                     </font>
                     </p>
+                     <a href="./speaker%20slides/Lauriere.pdf" target="_blank">slides</a>
                   </div>
                 </td>
               </tr>
@@ -401,6 +404,7 @@
                       In this talk, we present a model of a game among teams. Each team consists of a homogeneous population of agents. Agents within a team are cooperative while the teams compete with other teams. The dynamics and the costs are coupled through the empirical distribution (or the mean field) of the state of agents in each team, which is assumed to be observed by all agents. Agents have asymmetric information (also called a non-classical information structure). We propose a mean-field based refinement of the Team-Nash equilibrium of the game, which we call mean-field Markov perfect equilibrium (MF-MPE). We identify a dynamic programming decomposition to characterize MF-MPE. We then consider the case where each team has a large number of players and present a mean-field approximation that approximates the game among large-population teams as a game among infinite-population teams. We show that the MF-MPE of the game among teams of infinite population is easier to compute and is an ε-approximate MF-MPE of the game among teams of finite population.
                     </font>
                     </p>
+                     <a href="./speaker%20slides/Mahajan.pdf" target="_blank">slides</a>
                   </div>
                 </td>
               </tr>
@@ -417,6 +421,7 @@
                         This talk will introduce a systematic method for designing incentive mechanisms aimed at influencing large groups of strategic agents (both synthetic and human) towards desirable behaviors. Utilizing concepts from population games, the agents’ reactions to incentives and environmental factors are modeled using simple learning rules. Their behaviors, which evolve over time, are represented through a deterministic evolutionary model, creating a nonlinear feedback system with the incentive mechanisms. This analysis employs control systems tools and includes a novel subsystem interaction, such as an epidemic influenced by the agents’ strategies. A new two-step design approach based on system-theoretic passivity is proposed for creating incentive mechanisms. The first step involves selecting an optimal equilibrium with cost considerations, and the second step focuses on designing a control mechanism to stabilize this equilibrium. The approach is noted for its generality and robustness, functioning effectively even when agents are unaware of the incentive mechanisms and precise learning rules are unknown.
                     </font>
                     </p>
+                     <a href="./speaker%20slides/Martins.pdf" target="_blank">slides</a>
                   </div>
                 </td>
               </tr>
@@ -441,6 +446,7 @@
                         We consider the effect that higher-order learning can have in the context of Mirror descent (MD), a progenitor of many decision processes. While MD converges to the Nash equilibrium (NE) of many games, possibly under limited or uncertain feedback, many applications are characterized by conditions for which MD fails to equilibrate, namely, games with non-strict monotonicity or non-strict variationally stable state. We discuss the design of a set of theoretically-guided methodologies that overcome these convergence barriers, in particular through higher-order variants, designed through a passivity lens. We then consider discrete- time algorithms extracted from these which provide convergence guarantees in two challenging setups: the semi-bandit case, where an agent’s feedback is corrupted by Martingale-difference noise, and the full-bandit case, where each agent only receives a payoff signal that indicates its current performance. Illustrative examples are drawn from several recent applications arising from game-theoretic machine learning, such as the generation of adversarial attacks and generative adversarial networks.
                     </font>
                     </p>
+                     <a href="./speaker%20slides/Pavel.pdf" target="_blank">slides</a>
                   </div>
                 </td>
               </tr>
@@ -458,6 +464,7 @@
                         We analyze a class of stochastic dynamic games among teams with asymmetric information, where members of a team share their observations internally with a delay of d. Each team is associated with a controlled Markov Chain, whose dynamics are coupled through the players’ actions. These games exhibit challenges in both theory and practice due to the presence of signaling and the increasing domain of information over time. We develop a general approach to characterize a subset of Nash Equilibria where the agents can use a compressed version of their information, instead of the full information, to choose their actions. We identify two subclasses of strategies: Sufficient Private Information Based (SPIB) strategies, which only compress private information, and Compressed Information Based (CIB) strategies, which compress both common and private information. We show that while SPIB-strategy-based equilibria always exist, the same is not true for CIB-strategy-based equilibria. We develop a backward inductive sequential procedure, whose solution (if it exists) provides a CIB strategy- based equilibrium. We identify some instances where we can guarantee the existence of a solution to the above procedure. Our results highlight the tension among compression of in- formation, the existence of (compression-based) equilibria, and backward inductive sequential computation of such equilibria in stochastic dynamic games with asymmetric information.
                     </font>
                     </p>
+                     <a href="./speaker%20slides/Subramanian.pdf" target="_blank">slides</a>
                   </div>
                 </td>
               </tr>
@@ -482,6 +489,7 @@
                         In this talk, we will investigate the behaviors of two large population teams competing in a discrete environment, The team-level interactions are modeled as a zero-sum game, while the dynamics within each team are formulated as a collaborative mean-field team problem. Following the mean-field literature, we first approximate the large-population team game with its infinite-population limit. By introducing two fictitious coordinators we transform the infinite-population game into an equivalent zero-sum coordinator game. We study the optimal strategies for each team for the infinite population limit via a novel reachability analysis, and we show that the obtained team strategies are decentralized and are ε-optimal for the original finite-population game. We will provide extensions to heterogeneous team scenarios. Finally, we discuss the ramifications of this result for agent training in large-population multi-agent reinforcement learning (MARL) problems.
                     </font>
                     </p>
+                    <a href="./speaker%20slides/Tsiotras.pdf" target="_blank">slides</a>
                   </div>
                 </td>
               </tr>
